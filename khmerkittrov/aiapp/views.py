@@ -68,4 +68,3 @@ def ai_search (request):
     }
     return render(request, 'ai_search_result.html', context)
 
-

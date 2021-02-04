@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Khmerkit News</title>
+    <title>Khmerkit Python Programming Tutorial Content</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -39,7 +39,7 @@
             <div class="close-btn"><i class="icon-close"></i></div>
             <div class="row d-flex justify-content-center">
               <div class="col-md-8">
-                <form action="{% url 'ai-search-result-page' %}" class="search-form">
+                <form action="{% url 'python-search-result-page' %}" class="search-form">
                   <div class="form-group">
                     <input type="text" name="q" id="search" placeholder="រកមេរៀនកម្មវិធី Python តាមរយ: ចំណងជើងមេរៀន ឬ ពាក្យគន្លឹះក្នុងសេចក្តីផ្តើម">
                     <button type="submit" class="submit"><i class="icon-search-1"></i></button>
@@ -66,16 +66,16 @@
               <li class="nav-item"><a href="/" class="nav-link">ព័ត៌មាន</a>
               </li>
 
-              <li class="nav-item"><a href="/english_course" class="nav-link">រៀនអង់គ្លេស</a>
+              <li class="nav-item"><a href="/english_tutorial" class="nav-link">រៀនអង់គ្លេស</a>
               </li>
 
-              <li class="nav-item"><a href="/mathematics" class="nav-link">រៀនគណិត</a>
+              <li class="nav-item"><a href="/mathematics_tutorial" class="nav-link">រៀនគណិត</a>
               </li>
 
-              <li class="nav-item"><a href="/python" class="nav-link active">រៀន Python</a>
+              <li class="nav-item"><a href="/python_tutorial" class="nav-link active">រៀន Python</a>
               </li>
 
-              <li class="nav-item"><a href="/artificial_intelligence" class="nav-link">រៀន AI</a>
+              <li class="nav-item"><a href="/artificial_intelligence_tutorial" class="nav-link">រៀន AI</a>
               </li>
 
             </ul>
@@ -90,121 +90,69 @@
     </header>
 
     <div class="container">
+        <div class="row">
         <!-- Latest Posts -->
-        <main class="post blog-post col-lg-8">
-          <div class="container">
+            <main class="post blog-post col-lg-8">
+              <div class="container">
+                  <h6 style="color:#33b35a"> មេរៀនភាសាកម្មវិធី Python </h6>
+                  <br>
 
-              <h3>ជំពូកនៃមេរៀន កម្មវិធី Python</h3>
-              <h5>សូមជ្រើសរើសជំពូកណាមួយ ដើម្បីអានមេរៀនក្នុងជំពូកនោះ។</h5>
-              <br>
+                  <h4>មាតិកាតាមជំពូក </h4>
+                  <h6>សូមជ្រើសរើសជំពូកណាមួយ ដើម្បីអានមេរៀនក្នុងជំពូកនោះ។</h6>
+                  <br>
 
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=1 %}"> 1. ដំឡើងកម្មវិធី</a></div>
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=2 %}"> 2. Python Elements</a></div>
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=3 %}"> 3. Decision Making</a></div>
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=4 %}"> 4. Functions</a></div>
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=5 %}"> 5. Data Science</a></div>
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=6 %}"> 6. Class and Objects</a></div>
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=7 %}"> 7. File Handling</a></div>
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=8 %}"> 8. Numpy</a></div>
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=9 %}"> 9. SciPy</a></div>
-              <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=10 %}">10.Python MySQL</a></div>
-
-          </div>
-
-
-        </main>
-<!--        side bar-->
-       <aside class="col-lg-4">
-          <!-- Widget [Search Bar Widget]-->
-          <div class="widget search">
-            <header>
-              <h3 class="h6">ស្វែងរកមេរៀន Python តាមរយ: ចំណងជើងមេរៀន ឬ ពាក្យគន្លឹះក្នុងសេចក្តីផ្តើម</h3>
-            </header>
-            <form action="{% url 'ai-search-result-page' %}" class="search-form">
-              <div class="form-group">
-                <input type="text" name = "q" placeholder="តើលោកអ្នកស្វែងរកអ្វី?">
-                <button type="submit" class="submit"><i class="icon-search"></i></button>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=1 %}"> 1. ដំឡើងកម្មវិធី</a></div>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=2 %}"> 2. Python Elements</a></div>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=3 %}"> 3. Decision Making</a></div>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=4 %}"> 4. Functions</a></div>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=5 %}"> 5. Data Science</a></div>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=6 %}"> 6. Class and Objects</a></div>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=7 %}"> 7. File Handling</a></div>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=8 %}"> 8. Numpy</a></div>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=9 %}"> 9. SciPy</a></div>
+                  <div class="item d-flex justify-content-between"><a href="{% url 'python-each-chapter-page' pthncpt=10 %}">10.Python MySQL</a></div>
               </div>
-            </form>
-          </div>
+            </main>
+<!--        side bar-->
+           <aside class="col-lg-4">
+              <!-- Widget [Search Bar Widget]-->
+              <div class="widget search">
+                <header>
+                  <h3 class="h6">ស្វែងរកមេរៀន Python តាមរយ: ចំណងជើងមេរៀន ឬ ពាក្យគន្លឹះក្នុងសេចក្តីផ្តើម</h3>
+                </header>
+                <form action="{% url 'python-search-result-page' %}" class="search-form">
+                  <div class="form-group">
+                    <input type="text" name = "q" placeholder="តើលោកអ្នកស្វែងរកអ្វី?">
+                    <button type="submit" class="submit"><i class="icon-search"></i></button>
+                  </div>
+                </form>
+              </div>
 
-         <!-- Widget [Chapter Widget]-->
-       <div class="widget categories">
-            <header>
-              <h4><a href="{% url 'ai-chapter-list-page' %}">ជំពូក</a></h4>
-            </header>
-            {% for cat in chapter_count %}
-            <div class="item d-flex justify-content-between">
-              <a href="{% url 'ai-chapter-list-page' %}">
-                {{ cat.chapter__title }}
-              </a>
-              <span>{{ cat.chapter__title__count}}
-              </span>
-            </div>
-            {% endfor %}
-       </div>
+             <!-- Widget [Chapter Widget]-->
+               <div class="widget categories">
+                    <header>
+                      <h4><a href="{% url 'python-chapter-list-page' %}">មាតិកាតាមជំពូក</a></h4>
+                    </header>
+                    {% for cat in chapter_count %}
+                    <div class="item d-flex justify-content-between">
+                      <a href="{% url 'python-chapter-list-page' %}">
+                        {{ cat.chapter__title }}
+                      </a>
+                      <span>{{ cat.chapter__title__count}}
+                      </span>
+                    </div>
+                    {% endfor %}
+               </div>
 
-           <!-- Widget [Facebook Page Widget]-->
-       <div class="widget tags">
-            <header>
-              <h3 class="h6">ព័ត៌មាន KhmerKit Facebook Page</h3>
-            </header>
-            <div class="fb-page" data-href="https://www.facebook.com/KhmerKit-&#x1781;&#x17d2;&#x1798;&#x17c2;&#x179a;&#x1782;&#x17b7;&#x178f;-100759281519898/" data-tabs="" data-width="200" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/KhmerKit-&#x1781;&#x17d2;&#x1798;&#x17c2;&#x179a;&#x1782;&#x17b7;&#x178f;-100759281519898/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KhmerKit-&#x1781;&#x17d2;&#x1798;&#x17c2;&#x179a;&#x1782;&#x17b7;&#x178f;-100759281519898/">KhmerKit ខ្មែរគិត</a></blockquote></div>
-       </div>
-
-
-
-         <!-- Widget Advertisement        -->
-<!--          <div class="widget latest-posts">-->
-<!--            <header>-->
-<!--              <h3 class="h6">Latest Posts</h3>-->
-<!--            </header>-->
-<!--            <div class="blog-posts"><a href="#">-->
-<!--                <div class="item d-flex align-items-center">-->
-<!--                  <div class="image"><img src="{% static 'blogapp/img/small-thumbnail-1.jpg'%}" alt="..." class="img-fluid"></div>-->
-<!--                  <div class="title"><strong>Alberto Savoia Can Teach You About</strong>-->
-<!--                    <div class="d-flex align-items-center">-->
-<!--                      <div class="views"><i class="icon-eye"></i> 500</div>-->
-<!--                      <div class="comments"><i class="icon-comment"></i>12</div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div></a><a href="#">-->
-<!--                <div class="item d-flex align-items-center">-->
-<!--                  <div class="image"><img src="img/small-thumbnail-2.jpg" alt="..." class="img-fluid"></div>-->
-<!--                  <div class="title"><strong>Alberto Savoia Can Teach You About</strong>-->
-<!--                    <div class="d-flex align-items-center">-->
-<!--                      <div class="views"><i class="icon-eye"></i> 500</div>-->
-<!--                      <div class="comments"><i class="icon-comment"></i>12</div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div></a><a href="#">-->
-<!--                <div class="item d-flex align-items-center">-->
-<!--                  <div class="image"><img src="{% static 'blogapp/img/small-thumbnail-3.jpg'%}" alt="..." class="img-fluid"></div>-->
-<!--                  <div class="title"><strong>Alberto Savoia Can Teach You About</strong>-->
-<!--                    <div class="d-flex align-items-center">-->
-<!--                      <div class="views"><i class="icon-eye"></i> 500</div>-->
-<!--                      <div class="comments"><i class="icon-comment"></i>12</div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div></a></div>-->
-<!--          </div>-->
-
-
-          <!-- Widget [Tags Cloud Widget]-->
-<!--          <div class="widget tags">-->
-<!--            <header>-->
-<!--              <h3 class="h6">KhmerKit Apps</h3>-->
-<!--            </header>-->
-<!--            <ul class="list-inline">-->
-<!--               <li class="list-inline-item"><a href="#" class="tag">#Business</a></li>
-              <li class="list-inline-item"><a href="#" class="tag">#Technology</a></li>
-              <li class="list-inline-item"><a href="#" class="tag">#Fashion</a></li>
-              <li class="list-inline-item"><a href="#" class="tag">#Sports</a></li>
-              <li class="list-inline-item"><a href="#" class="tag">#Economy</a></li>
-             </ul>-->
-<!--          </div>-->
-        </aside>
-      </div>
+               <!-- Widget [Facebook Page Widget]-->
+               <div class="widget tags">
+                    <header>
+                      <h3 class="h6">ព័ត៌មាន KhmerKit Facebook Page</h3>
+                    </header>
+                    <div class="fb-page" data-href="https://www.facebook.com/KhmerKit-&#x1781;&#x17d2;&#x1798;&#x17c2;&#x179a;&#x1782;&#x17b7;&#x178f;-100759281519898/" data-tabs="" data-width="200" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/KhmerKit-&#x1781;&#x17d2;&#x1798;&#x17c2;&#x179a;&#x1782;&#x17b7;&#x178f;-100759281519898/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KhmerKit-&#x1781;&#x17d2;&#x1798;&#x17c2;&#x179a;&#x1782;&#x17b7;&#x178f;-100759281519898/">KhmerKit ខ្មែរគិត</a></blockquote></div>
+               </div>
+            </aside>
+        </div>
     </div>
 
     <!-- Page Footer-->
@@ -219,45 +167,14 @@
               <p>Phnom Penh, Cambodia</p>
               <p>Email: <a href="mailto:khmerkittrov@gmail.com">khmerkittrov@gmail.com</a></p>
               <ul class="social-menu">
-                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fa fa-youtube-play" style="color:red"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.facebook.com/KhmerKit-%E1%9E%81%E1%9F%92%E1%9E%98%E1%9F%82%E1%9E%9A%E1%9E%82%E1%9E%B7%E1%9E%8F-100759281519898"><i class="fa fa-facebook-square"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCP4U11tWLJaEYgcpLyLvtDg"><i class="fa fa-youtube-play" style="color:red"></i></a></li>
+                <li class="list-inline-item"><a href="https://twitter.com/KhmerKit"><i class="fa fa-twitter"></i></a></li>
                 <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
                 <li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
               </ul>
             </div>
           </div>
-<!--          <div class="col-md-4">-->
-<!--            <div class="menus d-flex">-->
-<!--              <ul class="list-unstyled">-->
-<!--                <li> <a href="#">My Account</a></li>-->
-<!--                <li> <a href="#">Add Listing</a></li>-->
-<!--                <li> <a href="#">Pricing</a></li>-->
-<!--                <li> <a href="#">Privacy &amp; Policy</a></li>-->
-<!--              </ul>-->
-<!--              <ul class="list-unstyled">-->
-<!--                <li> <a href="#">Our Partners</a></li>-->
-<!--                <li> <a href="#">FAQ</a></li>-->
-<!--                <li> <a href="#">How It Works</a></li>-->
-<!--                <li> <a href="#">Contact</a></li>-->
-<!--              </ul>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-md-4">-->
-<!--            <div class="latest-posts"><a href="#">-->
-<!--                <div class="post d-flex align-items-center">-->
-<!--                  <div class="image"><img src="{% static 'blogapp/img/small-thumbnail-1.jpg'%}" alt="..." class="img-fluid"></div>-->
-<!--                  <div class="title"><strong>Hotels for all budgets</strong><span class="date last-meta">October 26, 2016</span></div>-->
-<!--                </div></a><a href="#">-->
-<!--                <div class="post d-flex align-items-center">-->
-<!--                  <div class="image"><img src="{% static 'blogapp/img/small-thumbnail-2.jpg'%}" alt="..." class="img-fluid"></div>-->
-<!--                  <div class="title"><strong>Great street atrs in London</strong><span class="date last-meta">October 26, 2016</span></div>-->
-<!--                </div></a><a href="#">-->
-<!--                <div class="post d-flex align-items-center">-->
-<!--                  <div class="image"><img src="{% static 'blogapp/img/small-thumbnail-3.jpg'%}" alt="..." class="img-fluid"></div>-->
-<!--                  <div class="title"><strong>Best coffee shops in Sydney</strong><span class="date last-meta">October 26, 2016</span></div>-->
-<!--                </div></a></div>-->
-<!--          </div>-->
         </div>
       </div>
       <div class="copyrights">

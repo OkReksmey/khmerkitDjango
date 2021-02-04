@@ -22,7 +22,7 @@ class PTHN_Chapter(models.Model):
     #     return reverse('post:category-list-page', args=[self.slug])
 
     def __str__(self):
-        return self.title
+        return self.title + " | " +'id: ' + str(self.id)
     #
     # def get_absolute_url(self):
     #     return reverse('news-page')

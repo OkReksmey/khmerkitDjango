@@ -58,7 +58,7 @@ def each_category(request, cts):
         category_posts = category_posts.filter(Q(cts__icontains=query)
         )
     context = {
-        'cts' : cts,
+        'cts': cts,
         'category_posts': category_posts
     }
     return render(request, 'each_category.html', context)
@@ -94,7 +94,7 @@ def search (request):
         )
 
     context = {
-        'queryset' : queryset
+        'queryset': queryset
     }
     return render(request, 'search_result.html', context)
 #

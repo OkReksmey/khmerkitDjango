@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Khmerkit News</title>
+    <title>Khmerkit Search in English Tutorial </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -19,7 +19,7 @@
     <!-- Fancybox-->
     <link rel="stylesheet" href="{% static 'vendor/@fancyapps/fancybox/jquery.fancybox.min.css'%}">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="{% static 'css/style.default.css'%}" id="theme-stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.green.css'%}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{% static 'css/custom.css'%}">
     <!-- Favicon-->
@@ -68,16 +68,16 @@
                 <li class="nav-item"><a href="/" class="nav-link">ព័ត៌មាន</a>
               </li>
 
-              <li class="nav-item"><a href="/english_course" class="nav-link active">រៀនអង់គ្លេស</a>
+              <li class="nav-item"><a href="/english_tutorial" class="nav-link active">រៀនអង់គ្លេស</a>
               </li>
 
-              <li class="nav-item"><a href="/mathematics" class="nav-link">រៀនគណិត</a>
+              <li class="nav-item"><a href="/mathematics_tutorial" class="nav-link">រៀនគណិត</a>
               </li>
 
-              <li class="nav-item"><a href="/python" class="nav-link">រៀន Python</a>
+              <li class="nav-item"><a href="/python_tutorial" class="nav-link">រៀន Python</a>
               </li>
 
-              <li class="nav-item"><a href="/artificial_intelligence" class="nav-link">រៀន AI</a>
+              <li class="nav-item"><a href="/artificial_intelligence_tutorial" class="nav-link">រៀន AI</a>
               </li>
 
             </ul>
@@ -99,35 +99,48 @@
 
             {% if queryset %}
               <div class="post col-xl-6">
-                <h2 class="h4">លទ្ធផលស្វែងរកមេរៀន របស់លោកអ្នក ក្នុងមុខវិជ្ជា ភាសាអង់គ្លេស</h2>
-                <br />
+                <h6 style="color:#33b35a"> មេរៀនភាសាអង់គ្លេស </h6>
+                <br>
+                <h4 class="h4">លទ្ធផលស្វែងរកមេរៀនភាសាអង់គ្លេស</h4>
+                <br>
 
                 {% for post in queryset %}
-                <h3 class="h4"><a href="{% url 'eng-course-details' post.pk %}">{{ post.title }}</a></h3>
+                <h3 class="h4"><a href="{% url 'eng-course-details' post.pk %}" style="color:#000000">{{ post.title }}</a></h3>
                 <div class="post-meta d-flex justify-content-between">
 
-                    <div class="category"><a href="{% url 'eng-course-chapter-list-page'%}">{{ post.chapter }}</a></div>
+                    <div class="category"><a href="{% url 'eng-course-chapter-list-page'%}">ក្នុងជំពូកទី {{ post.chapter.id }} : {{ post.chapter.title }}</a></div>
                 </div>
+                <br>
+
                 <div class="post-thumbnail"><a href="{% url 'eng-course-details' post.pk %}"><img src="{{ post.thumbnailIndex.url }}" alt="..." class="img-fluid"></a></div>
                 <div class="post-details">
                   <div class="post-meta d-flex justify-content-start">
-                    <div class="date meta-last">{{ post.date_posted }}</div>
-                    &nbsp;
+                    <div class="date meta-last" style="color:#000000">{{ post.date_posted }}</div>
+                    &nbsp; &nbsp; &nbsp;
                     <div class> Photo credit: {{ post.photo_credit }}</div>
 
                   </div>
 
-                  <p class="text-muted"><a href="{% url 'eng-course-details' post.pk %}">{{ post.content }}</a></p>
+                  <p class="text-muted"><a href="{% url 'eng-course-details' post.pk %}" style="color:#000000">{{ post.content|safe }}</a></p>
                   <footer class="post-footer d-flex align-items-center">
-                    <div class="title"><a href="mailto:khmerkittrov@gmail.com"><span>{{ post.author }}</span></a></div>
-                    <div class="date"><i class="icon-clock"></i> {{ post.date_posted|timesince }} ago</div>
+                    <div class="title"><a href="mailto:khmerkittrov@gmail.com" style="color:#000000"><span>{{ post.author }}</span></a></div>
+                    <div class="date" style="color:#000000"><i class="icon-clock"></i> {{ post.date_posted|timesince }} ago</div>
                   </footer>
                 </div>
+                <br>
+                <br>
                 {% endfor %}
               </div>
+
             {% else %}
-                  <h2>អីយ៉ូយ! រកអត់ឃើញអ្វីទេ ទាន។
-                      <br/> សូមមេត្តា ប្រកបតួរអក្សរ នៃចំណងជើងមេរៀន ឬ ពាក្យគន្លឹះ ក្នុងសេចក្តីផ្តើម ឲ្យបានត្រឹមត្រូវ ដើម្បីស្វែងរកបន្តទៀត។ </h2>
+              <div class="post col-xl-6">
+
+                  <h6 style="color:#33b35a"> មេរៀនភាសាអង់គ្លេស </h6>
+                      <br>
+                  <h4>សូមអភ័យទោស រកអត់ឃើញអ្វីទេ។ </h4>
+                      <br>
+                  <h6>សូមមេត្តា ប្រកបតួរអក្សរ នៃចំណងជើងមេរៀន ឬ ពាក្យគន្លឹះ ក្នុងសេចក្តីផ្តើម ឲ្យបានត្រឹមត្រូវ ដើម្បីស្វែងរកបន្តទៀត។ </h6>
+              </div>
             {% endif %}
           </div>
         </main>
@@ -151,7 +164,7 @@
          <!-- Widget [Chapter Widget]-->
        <div class="widget categories">
             <header>
-              <h4><a href="{% url 'eng-course-chapter-list-page' %}">ជំពូក</a></h4>
+              <h4><a href="{% url 'eng-course-chapter-list-page' %}">មាតិកាតាមជំពូក</a></h4>
             </header>
             {% for cat in chapter_count %}
             <div class="item d-flex justify-content-between">
@@ -188,9 +201,9 @@
               <p>Phnom Penh, Cambodia</p>
               <p>Email: <a href="mailto:khmerkittrov@gmail.com">khmerkittrov@gmail.com</a></p>
               <ul class="social-menu">
-                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fa fa-youtube-play" style="color:red"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.facebook.com/KhmerKit-%E1%9E%81%E1%9F%92%E1%9E%98%E1%9F%82%E1%9E%9A%E1%9E%82%E1%9E%B7%E1%9E%8F-100759281519898"><i class="fa fa-facebook-square"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCP4U11tWLJaEYgcpLyLvtDg"><i class="fa fa-youtube-play" style="color:red"></i></a></li>
+                <li class="list-inline-item"><a href="https://twitter.com/KhmerKit"><i class="fa fa-twitter"></i></a></li>
                 <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
                 <li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
               </ul>
